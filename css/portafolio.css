@@ -26,10 +26,7 @@ header {
    El selector de id usa #.
    ============================================================ */
 
-#presentacion {
-    background-color: #f7fff4;
-    border-left: 8px solid #1b7505;
-}
+
 
 
 /* ============================================================
@@ -62,13 +59,14 @@ header {
    ============================================================ */
 
 .tarjeta {
-    width: 280px;
+    width: 350px;
     border: 1px solid #dddddd;
     border-radius: 10px;
     padding: 18px;
     background-color: white;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
     transition: box-shadow 0.2s;
+    
 }
 
 .tarjeta:hover {
@@ -94,6 +92,9 @@ header {
     margin-right: 6px;
 }
 
+.tarjeta {
+    text-align: center;
+}
 
 /* ============================================================
    BLOQUE 5: NOTA DE APOYO
@@ -132,10 +133,7 @@ header {
    Estilos para el bloque de barras de progreso.
    ============================================================ */
 
-#habilidades {
-    border-left: 6px solid #dba112;
-    background-color: #fff8e6;
-}
+
 
 #habilidades p {
     margin-bottom: 4px;
