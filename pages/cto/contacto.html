@@ -11,7 +11,9 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+    <!-- CSS base del sitio (se carga primero) -->
     <link rel="stylesheet" href="../../css/general.css">
+    <!-- CSS específico de esta página (se carga después) -->
     <link rel="stylesheet" href="../../css/contacto.css">
 </head>
 
@@ -34,7 +36,12 @@
 
         <a href="../buscar.html">Buscar</a>
 
-        <a href="contacto.html">
+        <a href="../../portafolio.html">
+            <i class="fa-solid fa-folder-open"></i>
+            Portafolio
+        </a>
+
+        <a href="contacto.html" class="activo">
             <i class="fa-solid fa-envelope"></i>
             Contacto
         </a>
@@ -42,8 +49,12 @@
 
     <main>
 
-        <section>
-            <h2>Datos de contacto</h2>
+        <!-- Sección de datos de contacto -->
+        <section class="datos-contacto">
+            <h2>
+                <i class="fa-solid fa-address-card"></i>
+                Datos de contacto
+            </h2>
 
             <p>
                 Esta página permite practicar enlaces, formularios, rutas relativas,
@@ -58,8 +69,12 @@
             </address>
         </section>
 
-        <section>
-            <h2>Redes sociales</h2>
+        <!-- Sección de redes sociales -->
+        <section class="redes">
+            <h2>
+                <i class="fa-solid fa-share-nodes"></i>
+                Redes sociales
+            </h2>
 
             <ul>
                 <li>
@@ -85,27 +100,36 @@
             </ul>
         </section>
 
+        <!-- Sección del formulario de contacto -->
         <section>
-            <h2>Formulario de contacto</h2>
+            <h2>
+                <i class="fa-solid fa-paper-plane"></i>
+                Formulario de contacto
+            </h2>
 
-            <!-- 
+            <p class="ayuda">
+                Complete todos los campos obligatorios marcados con *.
+                Su información solo será usada con fines académicos.
+            </p>
+
+            <!--
                 Este formulario se envía hacia buscar.html para practicar rutas relativas.
                 Desde pages/cto/contacto.html se sube un nivel con ../
             -->
-            <form method="GET" action="../buscar.html">
+            <form class="formulario-contacto" method="GET" action="../buscar.html">
 
-                <label for="nombre">Nombre completo:</label>
+                <label for="nombre">Nombre completo: *</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Escriba su nombre" required minlength="3"
                     maxlength="50">
 
                 <br><br>
 
-                <label for="correo">Correo electrónico:</label>
+                <label for="correo">Correo electrónico: *</label>
                 <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" required>
 
                 <br><br>
 
-                <label for="motivo">Motivo de contacto:</label>
+                <label for="motivo">Motivo de contacto: *</label>
                 <select id="motivo" name="motivo" required>
                     <option value="">Seleccione una opción</option>
                     <option value="consulta">Consulta académica</option>
@@ -115,19 +139,19 @@
 
                 <br><br>
 
-                <label for="mensaje">Mensaje:</label>
+                <label for="mensaje">Mensaje: *</label>
                 <br>
                 <textarea id="mensaje" name="mensaje" placeholder="Escriba su mensaje" rows="5" cols="40" required
                     minlength="10"></textarea>
 
                 <br><br>
 
-                <label for="fecha">Fecha de contacto:</label>
+                <label for="fecha">Fecha de contacto: *</label>
                 <input type="date" id="fecha" name="fecha" required>
 
                 <br><br>
 
-                <p>Preferencia de respuesta:</p>
+                <p>Preferencia de respuesta: *</p>
 
                 <label>
                     <input type="radio" name="respuesta" value="correo" required>
@@ -148,28 +172,39 @@
 
                 <br><br>
 
-                <button type="submit">
+                <button type="submit" class="btn-enviar">
                     <i class="fa-solid fa-paper-plane"></i>
                     Enviar
                 </button>
 
-                <button type="reset">
+                <button type="reset" class="btn-limpiar">
+                    <i class="fa-solid fa-rotate-left"></i>
                     Limpiar
                 </button>
+
             </form>
         </section>
 
-        <section>
-            <h2>Validación de contraseña</h2>
+        <!-- Sección de validación de contraseña -->
+        <section class="validacion">
+            <h2>
+                <i class="fa-solid fa-lock"></i>
+                Validación de contraseña
+            </h2>
 
             <p>
                 Este ejemplo permite practicar atributos como <code>required</code>,
                 <code>minlength</code>, <code>maxlength</code> y <code>pattern</code>.
             </p>
 
+            <p class="ayuda">
+                La contraseña debe tener entre 8 y 15 caracteres, incluir mayúscula,
+                minúscula, número y un carácter especial (@$!%*?&._-).
+            </p>
+
             <form method="GET" action="../buscar.html">
 
-                <label for="password">Contraseña segura:</label>
+                <label for="password">Contraseña segura: *</label>
 
                 <input type="password" id="password" name="password" required minlength="8" maxlength="15"
                     pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&._-])[A-Za-z\d@$!%*?&._-]{8,15}$"
@@ -178,7 +213,10 @@
 
                 <br><br>
 
-                <button type="submit">Validar</button>
+                <button type="submit" class="btn-enviar">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Validar
+                </button>
             </form>
         </section>
 

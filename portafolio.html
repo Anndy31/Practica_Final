@@ -3,34 +3,59 @@
 
 <head>
     <meta charset="UTF-8">
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio Académico</title>
 
-    <!-- CSS propio de la página -->
-     
-        <link rel="stylesheet" href="css/portafolio.css">
-        <link rel="stylesheet" href="css/general.css">
+    <!-- Ícono de la pestaña del navegador -->
+    <link rel="icon" href="img/mundito.ico" type="image/x-icon">
+
+    <!-- Librería externa para usar íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS base del sitio (se carga primero) -->
+    <link rel="stylesheet" href="css/general.css">
+    <!-- CSS específico de esta página (se carga después) -->
+    <link rel="stylesheet" href="css/portafolio.css">
 </head>
 
 <body>
 
-
     <!-- Encabezado -->
-    <header id="cabecera">
+    <header>
         <h1>Mi Portafolio Académico</h1>
         <p>Proyectos, aprendizajes y experiencias desarrolladas durante mi formación.</p>
     </header>
 
-    <!-- Menú -->
-    <nav id="menu-portafolio">
-        <a href="index.html">Regresar al Inicio</a>
+    <!-- Menú de navegación -->
+    <nav>
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+            Inicio
+        </a>
+        <a href="index.html#objetivo">Objetivo</a>
+        <a href="index.html#intereses">Intereses</a>
+        <a href="pages/buscar.html">Buscar</a>
+        <a href="portafolio.html" class="activo">
+            <i class="fa-solid fa-folder-open"></i>
+            Portafolio
+        </a>
+        <a href="pages/cto/contacto.html">
+            <i class="fa-solid fa-envelope"></i>
+            Contacto
+        </a>
     </nav>
+
+    <!-- Contenido lateral complementario -->
+    <aside>
+        <i class="fa-solid fa-circle-info"></i>
+        <strong>Sobre este portafolio:</strong> Aquí se presentan los proyectos y aprendizajes
+        más relevantes obtenidos durante la formación académica en Tecnologías de la Información.
+    </aside>
 
     <!-- Contenido principal -->
     <main>
 
-        <!-- Presentación -->
+        <!-- Sección de presentación -->
         <section id="presentacion">
             <h2>Presentación</h2>
             <p>
@@ -38,53 +63,72 @@
                 proyectos y conocimientos adquiridos durante mi formación en Tecnologías de la
                 Información, incluyendo desarrollo web, programación y redes.
             </p>
+            <p class="nota">
+                <i class="fa-solid fa-lightbulb"></i>
+                Cada proyecto refleja habilidades técnicas aplicadas en contextos reales de aprendizaje.
+            </p>
         </section>
 
-        <!-- Artículos -->
-            <h2>Mis Proyectos</h2>
+        <!-- Sección de proyectos con tarjetas -->
         <section id="proyectos">
+            <h2>Mis Proyectos</h2>
 
-         
-<BR>
-</BR>
             <article class="tarjeta">
                 <figure>
-                    <img src="img/proyecto1.jpg" alt="Proyecto Web">
+                    <img src="img/proyecto1.jpg" alt="Proyecto de Desarrollo Web">
+                    <figcaption>Desarrollo de sitio web con HTML y CSS</figcaption>
                 </figure>
-                <h3>Desarrollo Web</h3>
+                <h3>
+                    <i class="fa-solid fa-code"></i>
+                    Desarrollo Web
+                </h3>
                 <p>
-                    Creación de sitios web utilizando HTML y CSS, aplicando diseño responsivo
-                    y buenas prácticas de desarrollo.
+                    Creación de sitios web utilizando HTML semántico y CSS, aplicando
+                    estilos visuales, selectores y organización por archivos.
                 </p>
+                <p class="nota">Tecnologías: HTML5, CSS3</p>
             </article>
 
             <article class="tarjeta">
                 <figure>
-                    <img src="img/proyecto2.jpg" alt="Programación">
+                    <img src="img/proyecto2.jpg" alt="Proyecto de Programación">
+                    <figcaption>Desarrollo de algoritmos y aplicaciones</figcaption>
                 </figure>
-                <h3>Programación</h3>
+                <h3>
+                    <i class="fa-solid fa-laptop-code"></i>
+                    Programación
+                </h3>
                 <p>
-                    Desarrollo de algoritmos y aplicaciones utilizando lenguajes como C++ y Java.
+                    Desarrollo de algoritmos y aplicaciones utilizando lenguajes
+                    de programación orientados a objetos como C++ y Java.
                 </p>
+                <p class="nota">Tecnologías: C++, Java</p>
             </article>
 
             <article class="tarjeta">
                 <figure>
-                    <img src="img/proyecto3.jpg" alt="Redes">
+                    <img src="img/proyecto3.jpg" alt="Proyecto de Redes">
+                    <figcaption>Configuración de VLANs en Cisco Packet Tracer</figcaption>
                 </figure>
-                <h3>Redes de Computadoras</h3>
+                <h3>
+                    <i class="fa-solid fa-network-wired"></i>
+                    Redes de Computadoras
+                </h3>
                 <p>
-                    Implementación y configuración de VLANs, direccionamiento IP y servicios de red.
+                    Implementación y configuración de VLANs, direccionamiento IP
+                    y servicios de red en entornos simulados con Cisco Packet Tracer.
                 </p>
+                <p class="nota">Herramientas: Cisco Packet Tracer, CLI</p>
             </article>
 
         </section>
 
-        <!-- Tabla -->
+        <!-- Tabla de aprendizajes -->
         <section id="aprendizajes">
             <h2>Resumen de Aprendizaje</h2>
 
-            <table>
+            <table class="tabla-aprendizaje">
+                <caption>Áreas de conocimiento desarrolladas durante la carrera</caption>
                 <thead>
                     <tr>
                         <th>Área</th>
@@ -92,26 +136,22 @@
                         <th>Nivel</th>
                     </tr>
                 </thead>
-
                 <tbody>
                     <tr>
                         <td>HTML</td>
                         <td>Estructura y etiquetas semánticas</td>
                         <td>Avanzado</td>
                     </tr>
-
                     <tr>
                         <td>CSS</td>
-                        <td>Diseño, estilos y responsive</td>
+                        <td>Selectores, clases, identificadores, archivos específicos</td>
                         <td>Intermedio</td>
                     </tr>
-
                     <tr>
                         <td>Java</td>
                         <td>POO, herencia e interfaces</td>
                         <td>Intermedio</td>
                     </tr>
-
                     <tr>
                         <td>Redes</td>
                         <td>VLANs, DHCP y configuración Cisco</td>
@@ -121,11 +161,49 @@
             </table>
         </section>
 
+        <!-- Sección de habilidades con progress -->
+        <section id="habilidades">
+            <h2>Nivel de Habilidades</h2>
+
+            <p>HTML semántico:</p>
+            <progress value="85" max="100"></progress>
+            <span class="texto-verde"> 85%</span>
+
+            <p>CSS y diseño visual:</p>
+            <progress value="70" max="100"></progress>
+            <span class="texto-verde"> 70%</span>
+
+            <p>Nivel general de programación:</p>
+            <meter value="7" min="0" max="10"></meter>
+        </section>
+
+        <!-- Preguntas frecuentes -->
+        <section id="preguntas">
+            <h2>Preguntas sobre el Portafolio</h2>
+
+            <details>
+                <summary>¿Qué tecnologías se usaron en este portafolio?</summary>
+                <p>Este portafolio fue desarrollado con HTML5 semántico y CSS3 organizado en
+                archivos generales y específicos por página.</p>
+            </details>
+
+            <details>
+                <summary>¿Por qué se usa general.css y portafolio.css?</summary>
+                <p>El archivo general.css establece los estilos comunes del sitio. El archivo
+                portafolio.css agrega estilos propios de esta página como las tarjetas de
+                proyectos y la distribución en cuadrícula.</p>
+            </details>
+        </section>
+
     </main>
 
     <!-- Pie de página -->
-    <footer id="pie">
-        <p>&copy; 2026 - Portafolio Académico de Anndy Tomalá</p>
+    <footer>
+        <p>&copy; 2026 Anndy Tomalá — Portafolio Académico</p>
+        <p>Clase de Fundamentos Web — ESPE Santo Domingo</p>
+        <address>
+            Ecuador · contacto@ejemplo.com
+        </address>
     </footer>
 
 </body>

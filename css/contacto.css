@@ -154,3 +154,21 @@ address {
     padding: 10px;
     border-radius: 6px;
 }
+
+
+/* ============================================================
+   BLOQUE 11: ENLACE ACTIVO EN NAVEGACIÓN
+   Resalta el enlace de la página actual en el menú.
+   En HTML: class="activo"
+   ============================================================ */
+
+nav a.activo {
+    background-color: #0d1910;
+    color: white;
+}
+
+nav a.activo:hover {
+    background-color: #1b7505;
+    color: white;
+    text-decoration: none;
+}

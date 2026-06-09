@@ -1,117 +1,194 @@
-/* Estilos generales */
+/* ============================================================
+   portafolio.css
+   Estilos propios de portafolio.html.
+   Este archivo se usa para personalizar únicamente la página
+   del portafolio académico.
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    background-color: #f4f6f9;
+   Debe cargarse después de general.css.
+   ============================================================ */
+
+
+/* ============================================================
+   BLOQUE 1: ENCABEZADO DEL PORTAFOLIO
+   Se diferencia el header de esta página con un fondo oscuro
+   y un borde inferior dorado para dar identidad propia.
+   ============================================================ */
+
+header {
+    background-color: #0d1910;
+    border-bottom: 5px solid #dba112;
 }
 
 
-/* Header */
+/* ============================================================
+   BLOQUE 2: PRESENTACIÓN PRINCIPAL
+   Identificador único de la sección de bienvenida.
+   El selector de id usa #.
+   ============================================================ */
 
-#cabecera{
-    background-color:black;
-    color: white;
-    text-align: center;
-    padding: 25px;
+#presentacion {
+    background-color: #f7fff4;
+    border-left: 8px solid #1b7505;
 }
 
-#cabecera h1{
-    margin: 0;
-}
 
-/* Navegación */
+/* ============================================================
+   BLOQUE 3: SECCIÓN DE PROYECTOS
+   Se usa flexbox para distribuir las tarjetas en fila.
+   ============================================================ */
 
-#menu-portafolio{
-    background-color:orange;
-    text-align: center;
-    padding: 15px;
-}
-
-#menu-portafolio a{
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 20px;
-}
-
-#menu-portafolio a:hover{
-    background-color: orange;
-    border-radius: 5px;
-}
-
-/* Secciones */
-
-section{
-    padding: 25px;
-}
-
-#presentacion{
-    text-align: center;
-}
-
-/* Tarjetas */
-
-#proyectos{
+#proyectos {
     display: flex;
-    justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    background-color: transparent;
+    border: none;
+    padding: 0;
 }
 
-.tarjeta{
-    background-color: white;
-    width: 300px;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
-    text-align: center;
-}
-
-.tarjeta img{
+#proyectos h2 {
     width: 100%;
-    height: 180px;
+    color: #1b7505;
+    border-bottom: 2px solid #dba112;
+    padding-bottom: 6px;
+}
+
+
+/* ============================================================
+   BLOQUE 4: TARJETAS DE PROYECTO
+   Clase reutilizable aplicada a cada article del portafolio.
+   En HTML se usa así: class="tarjeta"
+   ============================================================ */
+
+.tarjeta {
+    width: 280px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 18px;
+    background-color: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+    transition: box-shadow 0.2s;
+}
+
+.tarjeta:hover {
+    border-color: #1b7505;
+    box-shadow: 0 6px 18px rgba(27, 117, 5, 0.18);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 160px;
     object-fit: cover;
     border-radius: 8px;
 }
 
-.tarjeta h3{
-    color: orange;
+.tarjeta h3 {
+    color: #1b7505;
+    margin-top: 12px;
+    margin-bottom: 8px;
 }
 
-/* Tabla */
+.tarjeta h3 i {
+    color: #dba112;
+    margin-right: 6px;
+}
 
-table{
-    width: 100%;
-    border-collapse: collapse;
+
+/* ============================================================
+   BLOQUE 5: NOTA DE APOYO
+   Clase reutilizable para párrafos destacados.
+   En HTML se usa así: class="nota"
+   ============================================================ */
+
+.nota {
+    background-color: #fff8e6;
+    border-left: 5px solid #dba112;
+    padding: 10px 14px;
+    font-size: 14px;
+    border-radius: 0 6px 6px 0;
+    margin-top: 10px;
+}
+
+
+/* ============================================================
+   BLOQUE 6: TABLA DE APRENDIZAJES
+   Clase específica para la tabla del portafolio.
+   En HTML: class="tabla-aprendizaje"
+   ============================================================ */
+
+.tabla-aprendizaje th {
+    background-color: #0d1910;
+}
+
+.tabla-aprendizaje td:first-child {
+    font-weight: bold;
+    color: #1b7505;
+}
+
+
+/* ============================================================
+   BLOQUE 7: SECCIÓN DE HABILIDADES
+   Estilos para el bloque de barras de progreso.
+   ============================================================ */
+
+#habilidades {
+    border-left: 6px solid #dba112;
+    background-color: #fff8e6;
+}
+
+#habilidades p {
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+#habilidades progress,
+#habilidades meter {
+    width: 300px;
+    height: 18px;
+}
+
+
+/* ============================================================
+   BLOQUE 8: ENLACE ACTIVO EN NAVEGACIÓN
+   Resalta el enlace de la página actual en el menú.
+   En HTML: class="activo"
+   ============================================================ */
+
+nav a.activo {
+    background-color: #0d1910;
+    color: white;
+}
+
+nav a.activo:hover {
+    background-color: #1b7505;
+}
+
+
+/* ============================================================
+   BLOQUE 9: PREGUNTAS DESPLEGABLES
+   Modifica details dentro del main de esta página.
+   ============================================================ */
+
+#preguntas details {
     background-color: white;
+    border: 1px solid #1b7505;
 }
 
-th{
-    background-color:orange;
-    color: white;
+#preguntas summary {
+    color: #0d1910;
 }
 
-th, td{
-    border: 1px solid #ccc;
-    padding: 12px;
-    text-align: center;
+#preguntas details:hover {
+    border-color: #dba112;
 }
 
-tr:nth-child(even){
-    background-color: #f2f2f2;
-}
 
-/* Footer */
+/* ============================================================
+   BLOQUE 10: ESPACIADO ENTRE SECCIONES
+   Separación visual consistente entre bloques de contenido.
+   ============================================================ */
 
-#pie{
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 20px;
-}
-img{
-    max-width:100%;
-    height:auto;
+main section {
+    margin-bottom: 24px;
 }

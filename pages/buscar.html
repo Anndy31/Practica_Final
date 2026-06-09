@@ -11,14 +11,16 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+    <!-- CSS base del sitio (se carga primero) -->
     <link rel="stylesheet" href="../css/general.css">
+    <!-- CSS específico de esta página (se carga después) -->
     <link rel="stylesheet" href="../css/buscar.css">
 </head>
 
 <body>
 
     <header>
-        <h1 >Búsqueda de información</h1>
+        <h1>Búsqueda de información</h1>
         <p>Esta página recibe datos enviados desde los formularios usando el método GET.</p>
     </header>
 
@@ -28,7 +30,15 @@
             Inicio
         </a>
 
-        <a href="buscar.html">Buscar</a>
+        <a href="buscar.html" class="activo">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Buscar
+        </a>
+
+        <a href="../portafolio.html">
+            <i class="fa-solid fa-folder-open"></i>
+            Portafolio
+        </a>
 
         <a href="cto/contacto.html">
             <i class="fa-solid fa-envelope"></i>
@@ -38,8 +48,12 @@
 
     <main>
 
-        <section>
-            <h2>¿Qué ocurre en esta página?</h2>
+        <!-- Sección explicativa -->
+        <section class="explicacion">
+            <h2>
+                <i class="fa-solid fa-circle-question"></i>
+                ¿Qué ocurre en esta página?
+            </h2>
 
             <p>
                 Cuando un formulario usa el método <code>GET</code>, los datos enviados aparecen
@@ -51,7 +65,7 @@
             </p>
 
             <pre>
-buscar.html?tema=html&correo=estudiante@ejemplo.com
+buscar.html?tema=html&amp;correo=estudiante@ejemplo.com
             </pre>
 
             <p>
@@ -60,10 +74,14 @@ buscar.html?tema=html&correo=estudiante@ejemplo.com
             </p>
         </section>
 
+        <!-- Formulario de búsqueda -->
         <section>
-            <h2>Formulario de búsqueda local</h2>
+            <h2>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Formulario de búsqueda local
+            </h2>
 
-            <form method="GET" action="buscar.html">
+            <form class="formulario-busqueda" method="GET" action="buscar.html">
 
                 <label for="tema">Tema de búsqueda:</label>
                 <input type="text" id="tema" name="tema" placeholder="Ejemplo: HTML" required minlength="3"
@@ -101,17 +119,22 @@ buscar.html?tema=html&correo=estudiante@ejemplo.com
 
                 <br><br>
 
-                <button type="submit">
+                <button type="submit" class="btn-buscar">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     Buscar
                 </button>
+
             </form>
         </section>
 
+        <!-- Tabla de temas -->
         <section>
-            <h2>Temas revisados</h2>
+            <h2>
+                <i class="fa-solid fa-table"></i>
+                Temas revisados
+            </h2>
 
-            <table border="1">
+            <table class="tabla-contenidos">
                 <caption>Resumen de contenidos practicados</caption>
 
                 <thead>
@@ -150,23 +173,31 @@ buscar.html?tema=html&correo=estudiante@ejemplo.com
             </table>
         </section>
 
-        <section>
-            <h2>Avance de práctica</h2>
+        <!-- Avance de práctica -->
+        <section class="avance-practica">
+            <h2>
+                <i class="fa-solid fa-chart-line"></i>
+                Avance de práctica
+            </h2>
 
             <p>HTML semántico:</p>
             <progress value="90" max="100"></progress>
-            <span>90%</span>
+            <span class="texto-verde"> 90%</span>
 
             <p>Formularios:</p>
             <progress value="75" max="100"></progress>
-            <span>75%</span>
+            <span class="texto-verde"> 75%</span>
 
             <p>Preparación para CSS:</p>
             <meter value="5" min="0" max="10"></meter>
         </section>
 
+        <!-- Preguntas desplegables -->
         <section>
-            <h2>Notas para la siguiente clase</h2>
+            <h2>
+                <i class="fa-solid fa-comments"></i>
+                Notas para la siguiente clase
+            </h2>
 
             <details>
                 <summary>¿Por qué todavía no se usa CSS?</summary>
